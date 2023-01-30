@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.monitoring',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# Monitoring
+# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#monitoring
+
+MONITORS = [
+    {
+        'NAME': 'django.contrib.monitoring.sentry',
+    },
+]
 
 
 # Password validation
